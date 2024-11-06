@@ -20,6 +20,6 @@ public class MessageController {
     @GetMapping("/publish")
     public ResponseEntity<String> sendMessage(@RequestParam("message") String message) {
         rabbitMQProducer.sendMessage(message);
-        return ResponseEntity.ok("Message was sent to Rabbit MQ");
+        return ResponseEntity.ok("String message was sent to Rabbit MQ");
     }
 }
